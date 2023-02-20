@@ -1,51 +1,124 @@
-# Lab 41
-## Cookie Stand Admin version 4
-## Matthew Gebhart
+# Project: ThriveHQ
 
+---
 
-## deploy to Vercel
+### We are deployed on Vercel
 
-deploy from end (this) and back end (cookie-stand-api) to Vercel
+[project url here]
 
-## Deployed URL
-[Cookie-stand-admin](https://cookie-stand-admin-nu-two.vercel.app/)
+---
 
-### Next.js documentation below
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Web Application
+
+[//]: # (***[Explain your app, should be at least a paragraph. What does it do? Why should I use? Sell your product!]***)
+
+The goal of our app is to create a simple aesthetic interface to help user's stay focused, motivated, and on task. We used a combination of Tailwind and React to create a clean and easy to navigate user experience that reduces stress to help accomplish their goals. We added a Django backend to store user information and make api calls for quick, error free functionality.
+
+---
+
+## Authors
+
+- Matthew Gebhart
+- Don Choi
+- Monica Ramirez
+- Gordon Reilley Jr.
+
+---
+
+## Tools Used
+
+VS Code
+PyCharm
+
+- Python
+- Docker
+- JavaScript
+- React
+- Next.JS
+- Django
+- Tailwind
+- Pytest
+
+---
+
+## Trello Board & Software Requirements
+
+- [Trello Board](https://trello.com/b/YEqZKZcf/thrivehq-hq)
+- [Software Requirements](./project_prep/requirements.md)
+
+---
+
+## Recent Updates
+
+#### V 1.0
+
+*Added README and Team Agreement* - 20 FEB 2023
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone this repository to your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+git clone https://github.com/YourRepo/YourProject.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once downloaded, activate your virtual environment and run by ____________
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+cd YourRepo/YourProject
+python xxx.py
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The poetry tools will automatically install any dependencies. Before running the application, setup your DB by doing ________
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+Update-Database
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once the database has been created, the application can be run. Options for running and debugging the application using can be found via your coding tools of ___________. From the command line, the following will start an instance of the Postgresql server to host the application:
 
-## Learn More
+```
+cd YourRepo/YourProject
+dotnet run
+```
 
-To learn more about Next.js, take a look at the following resources:
+Unit testing is included in the __________________ project using the pytest test framework. Tests have been provided for models, view models, controllers, and utility classes for the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+***[Provide some images of your app with brief description as title]***
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Overview of Recent Posts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Overview of Recent Posts](https://via.placeholder.com/500x250)
+
+---
+
+## Data Flow
+
+![Wireframes](project_prep/img/ThriveHQ_wireframes.png)
+![Domain Model](project_prep/img/ThriveHQ_domain_model.png)
+![Database Model](project_prep/img/ThriveHQ_database_diagram.png)
+
+---
+
+## Data Model
+
+### Overall Project Schema
+
+***[Add a description of your DB schema. Explain the relationships to me.]***
+![Database Schema](/assets/img/ERD.png)
+
+---
+
+## Change Log
+
+***[The change log will list any changes made to the code base. This includes any changes from TA/Instructor feedback]***
+
+---
+
+For more information on Markdown: <https://www.markdownguide.org/cheat-sheet>
