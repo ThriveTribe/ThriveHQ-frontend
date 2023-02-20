@@ -24,12 +24,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header user={user} logout={logout}/>
-      {user ? 
+      {/* ternary uncommented to bypass login requirement,  */}
+      {/* {user ?  */}
       <Main/>
-      :
+      {/* :
       <LoginForm onLogin={login}/>
      
-      }
+      } */}
       <Footer locations={resources || []}/>
     </>
   )
