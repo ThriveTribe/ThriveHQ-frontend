@@ -19,7 +19,7 @@ export default function Main(){
       
     </div>
     {/* <ToDoList className/> */}
-    <TDleft className="relative h-32 w-32"/>
+    {/* <TDleft className="relative h-32 w-32"/> */}
 
     </main>
 
