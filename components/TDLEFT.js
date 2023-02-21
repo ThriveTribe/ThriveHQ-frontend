@@ -13,7 +13,7 @@ export default function TDleft() {
         id="dropdownLeftButton"
         data-dropdown-toggle="dropdownLeft"
         data-dropdown-placement="top"
-        className="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-black bg-oppacity-3 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
         onClick={handleButtonClick}
       >

@@ -10,8 +10,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        'static':  "url('/assets/static-galaxy.png')"
+      fontFamily:{
+        sans:["Comfortaa", "sans-serif"]
       }
     },
   },
