@@ -1,14 +1,15 @@
 
 import { lazy, Suspense } from 'react';
 import ToDoList from './ToDoList';
-import TDleft from './TDLEFT';
 import Mantra from './Mantra';
+import DailyFact from './DailyFact';
 const Clock = lazy(() => import('../components/ClockTemp'));
 
 export default function Main(){
   return(
   
-    <main>
+    <main className="">
+      <DailyFact/>
       <div className='p-50 m-20 flex flex-col flex-grow text-center justify-items-center content-center'>
       <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, *user*</h1>
       <Suspense fallback={<div>Loading...</div>}>
