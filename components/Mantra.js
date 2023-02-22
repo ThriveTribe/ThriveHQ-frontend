@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ZenHandler from '@/pages/api/zen';
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const zenUrl = baseUrl + '/thrive/zen/';
