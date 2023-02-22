@@ -5,16 +5,16 @@ import Main from '/components/Main';
 import Backgrounds from '@/components/Backgrounds';
 // import Head from 'components/head';
 
-// import { useAuth } from '@/contexts/auth';
+import { useAuth } from '@/contexts/auth';
 // import {useState} from 'react';
 
-// import LoginForm from 'components/LoginForm';
+import LoginForm from 'components/LoginForm';
 
 // import useResource from '../hooks/useResource';
 
 
 export default function Home() {
-  // const { user, login, logout } = useAuth();
+  const { user, login, logout } = useAuth();
   // const { resources } = useResource();
 
   
@@ -32,17 +32,16 @@ export default function Home() {
 
       {/* <Header user={user} logout={logout}/> */}
       {/* ternary uncommented to bypass login requirement,  */}
-      {/* {user ?  */}
       <Backgrounds/>
       <div className='relative z10'>
       <Header className='relative z10'/>
-      <Main/>
-      </div>
-      {/* :
+      {user ? 
+      <Main user={user.username}/>
+      :
       <LoginForm onLogin={login}/>
-     
-      } */}
+      }
+    </div>
       <Footer/>
-    </>
+      </>
   )
 }
