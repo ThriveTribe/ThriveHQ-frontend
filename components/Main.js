@@ -5,13 +5,13 @@ import Mantra from './Mantra';
 import DailyFact from './DailyFact';
 const Clock = lazy(() => import('../components/ClockTemp'));
 
-export default function Main(){
+export default function Main(props){
   return(
   
     <main className="">
       <DailyFact/>
       <div className='p-50 m-20 flex flex-col flex-grow text-center justify-items-center content-center'>
-      <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, *user*</h1>
+      <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, {props.user}</h1>
       <Suspense fallback={<div>Loading...</div>}>
         <Clock />
       </Suspense>
