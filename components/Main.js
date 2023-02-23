@@ -9,23 +9,22 @@ const Clock = lazy(() => import('../components/ClockTemp'));
 export default function Main(props){
   return(
   
-    <main className="">
+    <main>
 
-      <div className='p-50 m-20 flex flex-col flex-grow text-center justify-items-center content-center'>
-      <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, {props.user}</h1>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Clock />
-      </Suspense>
-      <Mantra/>
-      <ToDoList/>
-      {/* <Calendar/> */}
-      <DailyFact/>
-      
-    </div>
-    {/* <ToDoList className/> */}
-    {/* <TDleft className="relative h-32 w-32"/> */}
+      <div className='m-20 flex flex-col flex-grow text-center justify-items-center content-center'>
+        <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, {props.user}</h1>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Clock/>
+        </Suspense>
+        <Mantra/>
+        {/* <Calendar/> */}
+        
+        <ToDoList/>
+        <DailyFact/>
+      </div>
 
-    </main>
+      {/* <ToDoList className/> */}
+      {/* <TDleft className="relative h-32 w-32"/> */}
 
   )
 }
