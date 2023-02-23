@@ -41,7 +41,7 @@ export default function ToDo() {
     }
 
     return (
-        <div className="bg-slate-500 bg-opacity-70" style={{ width: "500px" }}>
+        <div className="bg-slate-500 bg-opacity-70">
           <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>To-do</button>
             {showDropdown && (
               <div>
@@ -56,7 +56,7 @@ export default function ToDo() {
 
                 <ul className="flex flex-col w-6/8"> {
                   tasks.map((task, index) => (
-                    <li className=" text-blue-300 pr-10" key={index}>
+                    <li className=" text-blue-300 pr-10 border-y-2 border-red-300 mb-2" key={index}>
                       {editTask === index ? (
                         <form onSubmit={(event) => handleEdit(index, event.target.newValue.value)}>
                           <input type="text" defaultValue={task} name="newValue"/>
@@ -72,8 +72,8 @@ export default function ToDo() {
                           </button>
                         </form>
                         ) : (
-                        <div className=" group/item flex flex-row justify-between">
-                          <p className="text-left bg-cyan-900 truncate hover:text-clip"> {task} </p>
+                        <div className=" bg-cyan-900 group/item flex flex-row justify-between">
+                          <p className="text-left truncate hover:text-clip"> {task} </p>
                             <div className="flex flex-row">
                               <button className="mx-1 group/edit invisible group-hover/item:visible justify-self-end  basis-1/5 " type="button" onClick={() => setEditTask(index)}>
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:stroke-amber-400">
