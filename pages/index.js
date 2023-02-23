@@ -2,19 +2,20 @@ import Head from 'next/head';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Main from '/components/Main';
+import Login from '/components/Login';
+import LoginForm from 'components/LoginForm';
 import Backgrounds from '@/components/Backgrounds';
 // import Head from 'components/head';
 
 import { useAuth } from '@/contexts/auth';
 // import {useState} from 'react';
 
-import LoginForm from 'components/LoginForm';
 
 // import useResource from '../hooks/useResource';
 
 
 export default function Home() {
-  const { user, login, logout } = useAuth();
+  const { user, login, logout, createUser } = useAuth();
   // const { resources } = useResource();
 
   
