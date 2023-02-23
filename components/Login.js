@@ -1,11 +1,19 @@
 
 import CreateUserForm from './CreateUserForm';
+// import LoginForm from './LoginForm';
+import {useState} from "react";
 
 export default function LoginForm({ onLogin }) {
+    // const [showDropdown, setShowDropdown] = useState(false);
+    // const [toggleCreate, SetToggle] = useState(true)
 
     async function handleSubmit(event) {
         event.preventDefault();
         onLogin(event.target.username.value, event.target.password.value);
+    }
+
+    function toggleState(){
+        SetToggle(!toggleCreate);
     }
 
     return (
@@ -20,8 +28,14 @@ export default function LoginForm({ onLogin }) {
         //     </fieldset>
         // </form>
 
+        // { toggleCreate ?
+        //     <LoginForm/>
+        //     :
+        //     <CreateUserForm/>
 
-        <div className="container flex w-1/2 flex-col items-center p-2 mx-auto my-3 rounded-md border border-emerald-500 bg-emerald-200">
+    
+    // }
+        <div className="container flex w-3/4 flex-col items-center p-2 mx-auto my-3 rounded-md border border-emerald-500 bg-emerald-200">
         <form onSubmit={handleSubmit} className="items-center">
             <fieldset autoComplete='off' className="items-center">
                 {/* <button className="text-white bg-emerald-600 hover:bg-blue-300 font-medium rounded-md text-sm px-5 py-2.5 mt-2 text-center content-center w-60">Create New User</button> */}
