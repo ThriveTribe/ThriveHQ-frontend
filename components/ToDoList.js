@@ -41,8 +41,8 @@ export default function ToDo() {
     }
 
     return (
-        <div className="absolute bottom-25 right-0 bg-slate-500 bg-opacity-70 w-500">
-          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>To-do</button>
+        <div className="absolute bottom-0 right-5 bg-slate-500 bg-opacity-70 w-500">
+          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Tasks To Do</button>
             {showDropdown && (
               <div>
                 <form onSubmit={addTask}>
@@ -56,7 +56,7 @@ export default function ToDo() {
 
                 <ul className="flex flex-col w-6/8"> {
                   tasks.map((task, index) => (
-                    <li className=" text-blue-300 pr-10 border-y-2 border-red-300 mb-2" key={index}>
+                    <li className=" text-blue-300 pr-10 border-y-2 border-blue-300 mb-2" key={index}>
                       {editTask === index ? (
                         <form onSubmit={(event) => handleEdit(index, event.target.newValue.value)}>
                           <input type="text" defaultValue={task} name="newValue"/>
