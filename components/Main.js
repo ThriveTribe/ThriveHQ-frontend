@@ -25,7 +25,6 @@ export default function Main(props){
 
       {/* <ToDoList className/> */}
       {/* <TDleft className="relative h-32 w-32"/> */}
-    </main>
 
   )
 }
