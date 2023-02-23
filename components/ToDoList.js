@@ -41,12 +41,12 @@ export default function ToDo() {
     }
 
     return (
-        <div className="absolute bottom-0 right-5 bg-slate-500 bg-opacity-70 w-500">
+        <div className="absolute bottom-0 right-5 bg-slate-500 bg-opacity-70 w-60">
           <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Tasks To Do</button>
             {showDropdown && (
               <div>
                 <form onSubmit={addTask}>
-                  <input className="bg-white opacity-70 rounded-none" type="text" value={newTask} onChange={handleNewTask}/>
+                  <input className="my-1 bg-white opacity-70 rounded-none" type="text" value={newTask} onChange={handleNewTask}/>
                   <button className="submitButton text-white" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:drop-shadow-lg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -56,7 +56,7 @@ export default function ToDo() {
 
                 <ul className="flex flex-col w-6/8"> {
                   tasks.map((task, index) => (
-                    <li className=" text-blue-300 pr-10 border-y-2 border-blue-300 mb-2" key={index}>
+                    <li className="my-1 text-blue-300 pr-10 border-y-2 border-blue-300 mb-2" key={index}>
                       {editTask === index ? (
                         <form onSubmit={(event) => handleEdit(index, event.target.newValue.value)}>
                           <input type="text" defaultValue={task} name="newValue"/>
@@ -73,7 +73,7 @@ export default function ToDo() {
                         </form>
                         ) : (
                         <div className=" bg-cyan-900 group/item flex flex-row justify-between">
-                          <p className="text-left truncate hover:text-clip"> {task} </p>
+                          <p className="pl-5 text-left truncate hover:text-clip"> {task} </p>
                           <div className="flex flex-row">
                             <button className="mx-1 group/edit invisible group-hover/item:visible justify-self-end  basis-1/5 " type="button" onClick={() => setEditTask(index)}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:stroke-amber-400">
