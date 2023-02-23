@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
+const CreateUserURL = baseUrl + '/accounts/signup';
 
 const AuthContext = createContext();
 
@@ -23,6 +24,7 @@ export function AuthProvider(props) {
         user: null,
         login, //shorthand for login:login
         logout, //shorthand for logout:logout
+        createUser,
     });
 
     async function login(username, password) {
@@ -52,6 +54,37 @@ export function AuthProvider(props) {
 
         setState(prevState => ({ ...prevState, ...newState }));
     }
+
+    async function createUser(username, password) {
+
+        // const response = await axios.post(tokenUrl, { username, password });
+
+        const options = {
+            method: "POST",
+            body: JSON.stringify({username, password}),
+            headers: {'Content-Type': 'application/json'},
+        };
+
+        const response = await fetch(CreateUserURL, options);
+
+        const data = await response.json();
+
+        console.log(data)
+        // const decodedAccess = jwt.decode(data.access);
+
+        // const newState = {
+        //     tokens: data,
+        //     user: {
+        //         username: decodedAccess.username,
+        //         email: decodedAccess.email,
+        //         id: decodedAccess.user_id
+        //     },
+        // };
+
+        // setState(prevState => ({ ...prevState, ...newState }));
+        // login(username, password);
+    }
+
 
     function logout() {
         const newState = {
