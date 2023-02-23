@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       
       
-
+      <div className="relative overflow-hidden h-screen">
       {/* <Header user={user} logout={logout}/> */}
       {/* ternary uncommented to bypass login requirement,  */}
       <Backgrounds/>
@@ -39,10 +39,13 @@ export default function Home() {
         {user ? 
           <Main user={user.username}/>
           :
-          <LoginForm onLogin={login}/>
+          <div className="flex justify-center items-center p-20 pb-8">
+          <LoginForm onLogin={login} />
+          </div>
         }
       </div>
       <Footer/>
+      </div>
     </>
   )
 }
