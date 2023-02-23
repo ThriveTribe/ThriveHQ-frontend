@@ -11,7 +11,7 @@ export default function Main(props){
   
     <main>
 
-      <div className='m-20 flex flex-col flex-grow text-center justify-items-center content-center'>
+      <div className='m-20 flex flex-col flex-grow text-center justify-items-center content-center h-px-1500'>
         <h1 className= "text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, {props.user}</h1>
         <Suspense fallback={<div>Loading...</div>}>
           <Clock/>
