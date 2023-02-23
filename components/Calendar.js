@@ -14,6 +14,7 @@ function MyCalendar() {
     <div style={{position: 'relative', width: 'auto', height: '200px'}}>
       <div style={{position: 'absolute', bottom: '0', left: '0', width: '300px', height: '200px', padding: '10px'}}>
         <Calendar
+        className="bg-none"
           onChange={onDateChange}
           value={date}
         />

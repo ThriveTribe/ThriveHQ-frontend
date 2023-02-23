@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import ToDoList from './ToDoList';
 import Mantra from './Mantra';
 import DailyFact from './DailyFact';
-import Calendar from './Calendar';
+// import Calendar from './Calendar';
 const Clock = lazy(() => import('../components/ClockTemp'));
 
 export default function Main(props){
@@ -18,7 +18,7 @@ export default function Main(props){
       </Suspense>
       <Mantra/>
       <ToDoList/>
-      <Calendar/>
+      {/* <Calendar/> */}
       
     </div>
     {/* <ToDoList className/> */}

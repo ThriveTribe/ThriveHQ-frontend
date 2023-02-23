@@ -38,7 +38,7 @@ export default function LoginForm({ onLogin }) {
         <div className="container flex w-3/4 flex-col items-center p-2 mx-auto my-3 rounded-md border border-emerald-500 bg-emerald-200">
         <form onSubmit={handleSubmit} className="items-center">
             <fieldset autoComplete='off' className="items-center">
-                <button className="text-white bg-emerald-600 hover:bg-blue-300 font-medium rounded-md text-sm px-5 py-2.5 mt-2 text-center content-center w-60">Create New User</button>
+                {/* <button className="text-white bg-emerald-600 hover:bg-blue-300 font-medium rounded-md text-sm px-5 py-2.5 mt-2 text-center content-center w-60">Create New User</button> */}
                 <legend className="text-center text-2xl font-bold">Log In</legend>
 
                 <label htmlFor="password" className="text-center block mb-2 text-sm font-semibold text-gray-900">User Name</label>
