@@ -19,14 +19,14 @@ export default function Main(props){
         <Mantra/>
         {/* <Calendar/> */}
         
-        <ToDoList/>
         <DailyFact/>
+        <ToDoList/>
       </div>
-
       {/* <ToDoList className/> */}
       {/* <TDleft className="relative h-32 w-32"/> */}
     
     </main>
+    
   )
 }
 

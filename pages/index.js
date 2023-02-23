@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Main from '/components/Main';
-import Login from '/components/Login';
+// import Login from '/components/Login';
 import LoginForm from 'components/LoginForm';
 import Backgrounds from '@/components/Backgrounds';
 // import Head from 'components/head';
@@ -34,8 +34,8 @@ export default function Home() {
       {/* <Header user={user} logout={logout}/> */}
       {/* ternary uncommented to bypass login requirement,  */}
       <Backgrounds/>
-      <div className=''>
-        <Header className=''/>
+      <div className='relative z10'>
+        <Header className='relative z10'/>
         {user ? 
           <Main user={user.username}/>
           :
