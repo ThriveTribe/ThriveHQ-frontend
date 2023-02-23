@@ -35,10 +35,10 @@ export default function DailyFact(){
 
     return(
         <>
-        <div className=' flex-col content-center w-3/4 '>
-        <p className="text-gray-200 w-3/4 drop-shadow-md text-lg">Black History Month Fact:</p>
-        <p className="text-gray-200 w-3/4 drop-shadow-md text-lg">{factInfo.text}</p>
-        </div>
+            <div className='flex-col content-center w-3/4 opacity-70 bg-slate-300'>
+                <p className="text-gray-700 w-3/4 drop-shadow-md text-lg">Black History Month Fact:</p>
+                <p className="text-gray-700 w-3/4 drop-shadow-md text-lg">{factInfo.text}</p>
+            </div>
         </>
     )
 }
