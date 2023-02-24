@@ -9,10 +9,12 @@ const Clock = lazy(() => import('../components/ClockTemp'));
 export default function Main(props){
   return(
   
-    <main>
+    <main className="flex flex-col h-fit">
+
 
       <div className='m-10 flex flex-col flex-grow text-center justify-items-center content-center h-px-1500'>
         <h1 className= "p-10 text-6xl text-gray-200 drop-shadow-lg font-comfortaa">Hello, {props.user}</h1>
+
         <Suspense fallback={<div>Loading...</div>}>
           <Clock/>
         </Suspense>
