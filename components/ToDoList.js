@@ -41,14 +41,14 @@ export default function ToDo() {
     }
 
     return (
-        <div className="absolute bottom-0 right-5 rounded-md bg-slate-500 bg-opacity-70 w-60">
+        <div className="absolute bottom-0 right-5 rounded-md bg-black bg-opacity-40 w-60">
           <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today&apos;s Tasks</button>
             {showDropdown && (
               <div>
-                <form onSubmit={addTask}>
+                <form className="flex flex-row" onSubmit={addTask}>
                   <input className="my-1 bg-white opacity-70 rounded-md" type="text" value={newTask} onChange={handleNewTask}/>
-                  <button className="submitButton text-white" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:drop-shadow-lg">
+                  <button className="pl-2 submitButton text-white" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:drop-shadow-lg hover:stroke-indigo-500">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                   </button>
@@ -56,11 +56,11 @@ export default function ToDo() {
 
                 <ul className="flex flex-col w-6/8"> {
                   tasks.map((task, index) => (
-                    <li className="my-1 text-blue-300 pr-10 border-y-2 border-blue-300 mb-2" key={index}>
+                    <li className="my-1 text-slate-200 border-y-2 border-emerald-800 mb-2" key={index}>
                       {editTask === index ? (
                         <form onSubmit={(event) => handleEdit(index, event.target.newValue.value)}>
-                          <input type="text" defaultValue={task} name="newValue"/>
-                          <button className="" type="submit"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:stroke-amber-400">
+                          <input type="text" className="w-40 text-black" defaultValue={task} name="newValue"/>
+                          <button className="" type="submit"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:stroke-amber-400">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
                           </button>
@@ -72,7 +72,7 @@ export default function ToDo() {
                           </button>
                         </form>
                         ) : (
-                        <div className=" bg-cyan-900 group/item flex flex-row justify-between">
+                        <div className="group/item flex flex-row justify-between">
                           <p className="pl-5 text-left truncate hover:text-clip"> {task} </p>
                           <div className="flex flex-row">
                             <button className="mx-1 group/edit invisible group-hover/item:visible justify-self-end  basis-1/5 " type="button" onClick={() => setEditTask(index)}>
