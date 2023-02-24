@@ -36,7 +36,8 @@ export default function Mantra(){
 
     return(
         <>
-        <p className="text-gray-200 drop-shadow-md text-lg font-bold">&quot;{zenInfo.quote}&quot; - {zenInfo.author}</p>
+        <p className="text-gray-200 drop-shadow-md text-lg p-5">&quot;{zenInfo.quote}&quot; - {zenInfo.author}</p>
+
         </>
     )
 }
