@@ -26,7 +26,7 @@ export default function DailyFact(){
             let tempFactInfo = {
                 text: data['Results'][0]['text'],
             };
-            console.log(tempFactInfo)
+            // console.log(tempFactInfo)
         
             setFactInfo(tempFactInfo);
         })
@@ -35,11 +35,11 @@ export default function DailyFact(){
 
     return(
         <>
-        <div className=' flex justify-center pt-6 '>
-            <div className='flex-col p-4 justify-center w-3/4 '>
-                <p className= "text-slate-200 drop-shadow-lg text-md text-center">Black History Month Fact:</p>
-                <p className="text-slate-300 drop-shadow-lg text-md text-center">{factInfo.text}</p>
-            </div>
+            <div className=' flex justify-center pt-6 '>
+                <div className='flex-col p-4 justify-center w-3/5 '>
+                    <p className= "text-slate-200 drop-shadow-lg text-lg text-center">Black History Month Fact:</p>
+                    <p className="text-slate-300 drop-shadow-lg text-lg text-center">{factInfo.text}</p>
+                </div>
             </div>
         </>
     )

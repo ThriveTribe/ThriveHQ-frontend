@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
+// import Footer from 'components/Footer';
 import Main from '/components/Main';
 // import Login from '/components/Login';
 import LoginForm from 'components/LoginForm';
 import Backgrounds from '@/components/Backgrounds';
 // import Head from 'components/head';
+import DailyFact from '@/components/DailyFact';
 
 import { useAuth } from '@/contexts/auth';
 // import {useState} from 'react';
@@ -33,18 +34,21 @@ export default function Home() {
       <div className="relative overflow-hidden h-screen">
       {/* <Header user={user} logout={logout}/> */}
       {/* ternary uncommented to bypass login requirement,  */}
-      <Backgrounds/>
-      <div className='relative z10'>
-        <Header className='relative z10'/>
-        {user ? 
-          <Main user={user.username}/>
-          :
-          <div className="flex justify-center items-center p-20 pb-8">
-          <LoginForm onLogin={login} />
+        <Backgrounds/>
+          <div className='relative z10'>
+            <Header className='relative z10'/>
+            {user ? 
+              <>
+                <Main user={user.username}/>
+                <DailyFact/>
+              </>
+              :
+              <div className="flex justify-center items-center p-20 pb-8">
+                <LoginForm onLogin={login} />
+              </div>
+            }
           </div>
-        }
-      </div>
-      <Footer/>
+        {/* <Footer/> */}
       </div>
     </>
   )
