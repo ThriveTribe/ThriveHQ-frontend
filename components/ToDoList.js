@@ -42,7 +42,7 @@ export default function ToDo() {
 
     return (
         <div className="absolute bottom-0 right-5 rounded-md bg-slate-500 bg-opacity-70 w-60">
-          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today's Tasks</button>
+          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today&apos;s Tasks</button>
             {showDropdown && (
               <div>
                 <form onSubmit={addTask}>
