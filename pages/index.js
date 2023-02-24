@@ -7,6 +7,7 @@ import LoginForm from 'components/LoginForm';
 import Backgrounds from '@/components/Backgrounds';
 // import Head from 'components/head';
 import DailyFact from '@/components/DailyFact';
+import ToDoList from '@/components/ToDoList';
 
 import { useAuth } from '@/contexts/auth';
 // import {useState} from 'react';
@@ -30,17 +31,19 @@ export default function Home() {
         
       </Head>
       
-      
-      <div className="relative overflow-hidden h-screen">
-      {/* <Header user={user} logout={logout}/> */}
-      {/* ternary uncommented to bypass login requirement,  */}
-        <Backgrounds/>
+        <div className="relative overflow-hidden h-screen flex flex-col">
+          {/* <Header user={user} logout={logout}/> */}
+          {/* ternary uncommented to bypass login requirement,  */}
+          <Backgrounds/>
           <div className='relative z10'>
             <Header className='relative z10'/>
             {user ? 
               <>
                 <Main user={user.username}/>
-                <DailyFact/>
+                <div className="fixed inset-x-0 bottom-0 z-10">
+                  <DailyFact />
+                  <ToDoList />
+                </div>
               </>
               :
               <div className="flex justify-center items-center p-20 pb-8">
@@ -48,8 +51,8 @@ export default function Home() {
               </div>
             }
           </div>
-        {/* <Footer/> */}
-      </div>
+          {/* <Footer/> */}
+        </div>
     </>
   )
 }

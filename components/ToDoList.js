@@ -41,8 +41,8 @@ export default function ToDo() {
     }
 
     return (
-        <div className="absolute bottom-0 right-5 rounded-md bg-black bg-opacity-40 w-60">
-          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today&apos;s Tasks</button>
+        <div className="absolute bottom-3 right-5 rounded-md bg-black bg-opacity-40 w-60">
+          <button className="p-1 underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today&apos;s Tasks</button>
             {showDropdown && (
               <div>
                 <form className="flex flex-row" onSubmit={addTask}>
