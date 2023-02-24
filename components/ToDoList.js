@@ -41,12 +41,12 @@ export default function ToDo() {
     }
 
     return (
-        <div className="absolute bottom-0 right-5 bg-slate-500 bg-opacity-70 w-60">
-          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Tasks To Do</button>
+        <div className="absolute bottom-0 right-5 rounded-md bg-slate-500 bg-opacity-70 w-60">
+          <button className="underline-offset-1 text-white text-xl" onClick={toggleDropdown}>Today's Tasks</button>
             {showDropdown && (
               <div>
                 <form onSubmit={addTask}>
-                  <input className="my-1 bg-white opacity-70 rounded-none" type="text" value={newTask} onChange={handleNewTask}/>
+                  <input className="my-1 bg-white opacity-70 rounded-md" type="text" value={newTask} onChange={handleNewTask}/>
                   <button className="submitButton text-white" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-125 hover:drop-shadow-lg">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
