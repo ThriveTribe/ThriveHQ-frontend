@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useAuth } from "@/contexts/auth";
+// import Weather from './weather';
 
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
 </svg>
 </button>
             </div>
+        {/* <Weather/> */}
         </header>
     )
 

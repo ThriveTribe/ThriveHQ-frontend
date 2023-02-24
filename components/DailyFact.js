@@ -26,7 +26,7 @@ export default function DailyFact(){
             let tempFactInfo = {
                 text: data['Results'][0]['text'],
             };
-            console.log(tempFactInfo)
+            // console.log(tempFactInfo)
         
             setFactInfo(tempFactInfo);
         })
